@@ -46,15 +46,18 @@ full Kelly bet on the account value.
 
 ## Reading the dashboard
 
+- **Two pages:** [daily high](index.html) and [daily low](low.html) markets, toggled at the top. Both show
+  the same paper account; each lists only the positions in its own markets.
 - **Top line:** account value, profit or loss with open positions valued at the mid price, and cash.
-- **Open positions:** one panel per market held. The curves are the market, the model alone and the blend
-  that was traded, across temperatures. Solid lines are now, dashed lines are at entry. The shaded bracket is
-  the one held.
+- **Open positions:** one panel per market held. The curves are the market (orange), the GBM forecast alone
+  (green) and the model that was traded, the blend of the two (blue), across temperatures. Solid lines are
+  now, dashed lines are at entry. The shaded bracket is the one held. On a day that has started, a vertical
+  line marks the highest temperature reported so far by the station (the lowest, on the daily-low page).
 - **Price move after entry (CLV):** the price of the side bought, 6 and 24 hours after the fill, minus the
   price paid. If it is positive on average, the market tends to move toward the bot's view after it buys.
 - **Closed positions:** settled trades, with results by city and by how far ahead they were placed.
 
 ## How this page is updated
 
-The bot runs on a laptop. After each update it copies the dashboard to `index.html` here and pushes it.
+The bot runs on a laptop. After each update it copies the two pages to `index.html` and `low.html` here and pushes them.
 Only the latest version is kept in the history of this repository.
